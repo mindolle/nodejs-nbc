@@ -1,7 +1,6 @@
 import express from 'express';
 import connect from './scheams/index.js';
-import todosRouter from './routes/todos.router.js';
-import errorHandlerMiddleware from './middlewares/error-handler.middlewares.js';
+import products from './routes/products.router.js';
 
 const app = express();
 const PORT = 3000;
@@ -28,10 +27,10 @@ router.get('/', (req, res) => {
 });
 
 // 미들웨어5
-app.use('/api', [router, todosRouter]);
+app.use('/api', [router, products]);
 
 // 에러 처리 미들웨어를 등록한다.
-app.use(errorHandlerMiddleware);
+// app.use(errorHandlerMiddleware);
 
 app.listen(PORT, () => {
   console.log(PORT, '포트로 서버가 열렸어요!');

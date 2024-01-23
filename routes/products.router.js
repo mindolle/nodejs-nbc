@@ -1,6 +1,6 @@
 import express from 'express';
 import joi from 'joi';
-import Todo from '../scheams/todo.schemas.js';
+import Todo from '../scheams/products.schema.js';
 
 const router = express.Router();
 

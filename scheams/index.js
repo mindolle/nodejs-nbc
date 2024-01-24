@@ -5,10 +5,10 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const db_user = process.env.DB_USER;
-const db_password = process.env.DB_PASSWORD;
+// const db_password = process.env.DB_PASSWORD;
 const db_url = process.env.DB_URL;
 
-const DB_HOST = `mongodb+srv://${db_user}:${db_password}@${db_url}`;
+const DB_HOST = `mongodb+srv://${db_user}:aaaa4321@${db_url}`;
 
 const connect = () => {
   mongoose
